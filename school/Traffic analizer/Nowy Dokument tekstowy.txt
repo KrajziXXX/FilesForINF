@@ -1,0 +1,3 @@
+Zrobić uppdate związany z danymi: 
+śilnika(disel/benzyna/gaz/hybryda/elektryk oraz pojemność/kW w elektrykach), 
+wagi całkowitej auta,
