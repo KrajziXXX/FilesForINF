@@ -1,0 +1,9 @@
+Struktura rekordu (jeden rekord = jedna linia w Data.txt, pola rozdzielone średnikiem ;):
+
+1.creator        – tekst (nazwa twórcy/streamera)
+2.title          – tekst (tytuł klipu)
+3.duration_sec   – liczba całkowita (czas trwania w sekundach)
+4.game           – tekst (nazwa gry)
+5.upload_year    – liczba całkowita (rok publikacji)
+6.views          – liczba całkowita (co najmniej 32-bit)
+7.thumbnail      – tekst (nazwa pliku miniatury, np. thumb1.png)

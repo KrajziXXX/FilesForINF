@@ -1,0 +1,11 @@
+nazwa funkcji:   load_data
+opis funkcji:    Sprawdza czy plik istnieje, wczytuje rekordy pliku
+parametry:       paramentr1 (filename) przez ten parametr przekazywana jest nazwa pliku
+zwracany typ i opis: zwraca liste records potrzebną nam do wyświetlenia rekordów
+autor:           Krystian wyrwicki
+
+nazwa funkcji:   display_all
+opis funkcji:    sprawdza czy ma co wyświetlić, wyświetla liste wszystkich rekordów
+parametry:       parametr1 (records) przz parametr przekazywana jest lista rekordów
+zwracany typ i opis: funkcja nic sama w sobie nie zwraca ale wyświetla elementy listy 
+autor:           Krystian Wyrwicki

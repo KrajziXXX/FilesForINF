@@ -1,0 +1,6 @@
+GamerX;Epic Headshot;12;CS:GO;2024;1532;thumb1.png
+NoobMaster;Clutch Finale;28;Valorant;2023;874;thumb2.png
+TurboTom;Speedrun Part1;95;Minecraft;2022;2310;thumb3.png
+AceAnna;Best Play;18;Fortnite;2024;670;thumb4.png
+RetroRex;Old School Frag;45;Quake;2021;432;thumb5.png
+StreamQueen;Crazy Comeback;22;League of Legends;2024;1289;thumb6.png
