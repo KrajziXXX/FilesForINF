@@ -9,3 +9,5 @@ def najczestszy_znak(tekst):
             max_znak = znak
 
     return max_znak
+
+print(najczestszy_znak("aaaabbc"))
