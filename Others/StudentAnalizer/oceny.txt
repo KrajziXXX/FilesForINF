@@ -1,0 +1,3 @@
+Jan Kowalski 4 5 3 4 5
+Anna Nowak 5 5 4 4 5
+Piotr Zielinski 2 3 3 2 4
