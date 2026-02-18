@@ -1,0 +1,3 @@
+PŁUG_01;dostępny 
+PŁUG_02;w_trakcie 
+POSYPYWARKA;dostępny

@@ -1,0 +1,3 @@
+CENTRUM;wysoki 
+OSIEDLE_PÓŁNOC;średni 
+TRASA_NARCIARSKA;niski 
