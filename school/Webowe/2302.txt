@@ -1,0 +1,137 @@
+import { useState } from 'react'
+import './App.css'
+
+export default function App() {
+  const [zadanie, setZadanie] = useState({
+    nazwa: "",
+    punkty: "",
+    opis: "",
+    termin: "",
+    status: false,
+    priorytet: ""
+  })
+  const [ukryj, setUkryj] = useState({
+    punkty: false,
+    opis: false,
+    termin: false,
+    status: false,
+    priorytet: false
+  })
+
+  function handleChange(e) {
+    const { name, value, type, checked } = e.target
+    const val = type === "checkbox" ? checked : value
+
+    setZadanie(zad => ({ ...zad, [name]: val }))
+    console.log(name, val)
+
+    if (name === "nazwa" && val !== "") {
+      setUkryj(ukr => ({ ...ukr, punkty: true }))
+    }
+    if (name === "punkty" && value !== "") {
+      setUkryj(ukr => ({ ...ukr, opis: true }))
+    }
+    if (name === "opis" && value !== "") {
+      setUkryj(ukr => ({ ...ukr, termin: true }))
+    }
+    if (name === "termin" && value !== "") {
+      setUkryj(ukr => ({ ...ukr, status: true }))
+    }
+    if (name === "status") {
+      setUkryj(ukr => ({ ...ukr, priorytet: true }))
+    }
+  }
+
+  function handleSubmit() {
+    console.log("Zapisano zadanie:", zadanie)
+  }
+
+  return (
+    <div>
+      <Tekst tekst="Zadania do wykonania" wielkosc="header" />
+
+      <Tekst tekst="Nazwa zadania" wielkosc="normal" />
+      <Poleform
+        wlasciwosc="text"
+        name="nazwa"
+        value={zadanie.nazwa}
+        onChange={handleChange}
+      />
+
+      <Tekst tekst="Punkty" wielkosc="normal" />
+      <Poleform
+        wlasciwosc="number"
+        name="punkty"
+        value={zadanie.punkty}
+        onChange={handleChange}
+        disabled={!ukryj.punkty}
+      />
+
+      <Tekst tekst="Opis zadania" wielkosc="normal" />
+      <Poleform
+        wlasciwosc="text"
+        name="opis"
+        value={zadanie.opis}
+        onChange={handleChange}
+        disabled={!ukryj.opis}
+      />
+
+      <Tekst tekst="Termin wykonania" wielkosc="normal" />
+      <input
+        type="date"
+        name="termin"
+        value={zadanie.termin}
+        onChange={handleChange}
+        disabled={!ukryj.termin}
+      />
+
+      <Tekst tekst="Status" wielkosc="normal" />
+      <input
+        type="checkbox"
+        name="status"
+        checked={zadanie.status}
+        onChange={handleChange}
+        disabled={!ukryj.status}
+      />
+
+      <Tekst tekst="Priorytet" wielkosc="normal" />
+      <div>
+          <input
+            type="radio"
+            name="priorytet"
+            value="niski"
+            onChange={handleChange}
+            disabled={!ukryj.priorytet}
+          /> Niski
+          <input
+            type="radio"
+            name="priorytet"
+            value="wysoki"
+            onChange={handleChange}
+            disabled={!ukryj.priorytet}
+          /> Wysoki
+      </div>
+      <br />
+      <button onClick={handleSubmit}>Zapisz zadanie</button>
+
+    </div>
+  )
+}
+
+function Tekst({ tekst, wielkosc }) {
+  if (wielkosc === 'normal') return <p>{tekst}</p>
+  if (wielkosc === 'header') return <h1>{tekst}</h1>
+  return null
+}
+
+function Poleform({ wlasciwosc, name, value, onChange, disabled }) {
+  return (
+    <input
+      type={wlasciwosc}
+      name={name}
+      value={value}
+      onChange={onChange}
+      disabled={disabled}
+    />
+  )
+}
