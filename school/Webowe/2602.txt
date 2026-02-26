@@ -1,0 +1,22 @@
+import "./App.css";
+
+function App() {
+  return <Map></Map>;
+}
+
+function Map() {
+  const liczby = [1, 1, 5, 10, 3, 1, 7];
+  const imiona = ["rObert", "Marek", "tomek", "karOl", "MaRtA"];
+  return (
+    <ul>
+      {liczby.map((i) =>
+        // <li>{i * i}</li>
+        i % 2 == 0 ? <li>parzysta</li> : <li>nieparzyssta</li>,
+      )}
+      {imiona.map((imie) => (
+        <li>{imie[0].toUpperCase() + imie.slice(1).toLowerCase()}</li>
+      ))}
+    </ul>
+  );
+}
+export default App;
